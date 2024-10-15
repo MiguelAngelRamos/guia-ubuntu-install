@@ -104,7 +104,12 @@ Prometheus recolectará las métricas desde Node Exporter.
    sudo cp -r prometheus-2.47.0.linux-amd64/console_libraries /etc/prometheus/
    ```
 
-6. **Corregir los permisos de `/var/lib/prometheus`:**
+6. **Crear un usuario para Prometheus:**
+
+   ```bash
+   sudo useradd -rs /bin/false prometheus
+   ```
+7. **Corregir los permisos de `/var/lib/prometheus`:**
 
    Prometheus necesita acceso al directorio `/var/lib/prometheus`:
 
@@ -120,11 +125,6 @@ Prometheus recolectará las métricas desde Node Exporter.
    sudo chown prometheus:prometheus /var/lib/prometheus/query_log
    ```
 
-7. **Crear un usuario para Prometheus:**
-
-   ```bash
-   sudo useradd -rs /bin/false prometheus
-   ```
 
 8. **Configurar el servicio de Prometheus:**
 
