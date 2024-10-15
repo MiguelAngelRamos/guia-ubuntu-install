@@ -52,3 +52,18 @@ sudo apt install php-sqlite3
 ```sh
 sudo systemctl restart apache2
 ```
+
+11. Instalar Postman
+
+   ```bash
+   sudo apt update
+   sudo apt install snapd
+   ```
+
+   ```bash
+   sudo snap install postman
+   ```
+
+   ```bash
+   postman
+   ```
