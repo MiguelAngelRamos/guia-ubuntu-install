@@ -33,7 +33,22 @@
  php artisan jwt:secret
  ```
 
-7. Migraciones
+7. Crear el Archivo .env
+```sh
+DB_CONNECTION=sqlite
+DB_DATABASE= C:\Apache24\htdocs\laravel\books-api\database.sqlite
+```
+8. Migraciones
   ```sh
   php artisan migrate
   ```
+9. Instalar la extension
+
+```sh
+sudo apt install php-sqlite3
+```
+10. Reiniciar el Apache
+
+```sh
+sudo systemctl restart apache2
+```
